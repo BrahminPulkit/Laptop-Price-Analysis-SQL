@@ -1,6 +1,6 @@
 -- Eda Using Sql
 
--- heal -> tail -> sample
+-- head -> tail -> sample
 -- for numerical cols
 -- 		-- 8 number summary[count, min, max, mean, std, q1, q2, q3]
 -- 		-- missing values
@@ -151,6 +151,12 @@ SELECT
     TypeName,
     -- Engineered PPI
     ROUND(SQRT(POW(Resolution_width, 2) + POW(Resolution_hight, 2)) / Inches, 2) AS ppi,
+    
+    CASE 
+		WHEN Inches < 14.0 THEN  'Small'
+        WHEN Inches >= 14.0 AND Inches <17.0 THEN 'Medium'
+        ELSE 'Large' 
+	END AS 'Screen_size',
     -- Engineered Price Bracket
     CASE 
         WHEN Price < 35000 THEN 'Budget'
