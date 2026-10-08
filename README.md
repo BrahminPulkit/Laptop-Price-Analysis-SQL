@@ -41,3 +41,26 @@ SQL exercises rather than a single portable migration script.
 Data inspection, data cleaning, type conversion, grouping, window-function
 exploration and feature engineering. Numerical findings should be reproduced
 from the queries; no unverified performance or business-impact claims are made.
+
+## Reproducible dataset findings
+
+![Laptop price and brand analysis](docs/results/laptop_analysis.png)
+
+```bash
+python -m pip install -r requirements.txt
+python analyze.py
+```
+
+The committed CSV contains **1,303 rows**, **19 companies**, **30 rows with missing
+price** and **58 duplicate-content rows** after ignoring the source index column.
+The median of available prices is **52,161.12 in the dataset's original units**.
+Currency is not verified by this repository's metadata.
+
+Missing prices and duplicates are counted, not silently removed. Brand summaries
+use rows with a valid price and company. The chart compares median prices only
+for brands represented by at least 20 valid rows.
+
+Inspect the [summary JSON](docs/results/summary.json) and
+[brand summary CSV](docs/results/brand_summary.csv). The Python analysis validates
+the committed CSV independently; it does not claim that the mixed-dialect SQL
+scripts have been executed successfully in MySQL.

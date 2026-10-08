@@ -1,0 +1,14 @@
+{
+  "dataset_sha256": "08bcb9c2bb7babc1347b5637719a495965f5696cc6050bbd4485a54b0cb10403",
+  "rows": 1303,
+  "columns": 12,
+  "companies": 19,
+  "duplicate_content_rows": 58,
+  "missing_price_rows": 30,
+  "median_price": 52161.12,
+  "mean_price": 59955.81,
+  "price_unit": "Original dataset units; currency not verified by repository metadata",
+  "most_common_company": "Lenovo",
+  "most_common_company_count": 290,
+  "method": "Descriptive Python validation of the raw committed CSV; not an execution of the SQL scripts. Duplicate rows are counted, not removed."
+}
