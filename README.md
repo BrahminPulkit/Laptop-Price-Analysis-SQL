@@ -22,12 +22,6 @@ such as screen pixel density and price categories.
 The scripts include `ALTER`, `UPDATE` and `DELETE` statements. Use a copy of the
 dataset and retain the backup table created by the cleaning script.
 
-## Questions explored
-
-- How are laptop prices distributed, and where are potential outliers?
-- How do brands, device types and specifications relate to price?
-- How can raw RAM, storage, display and weight fields be standardized?
-- How can pixel density and price categories support deeper analysis?
 
 ## SQL compatibility
 
